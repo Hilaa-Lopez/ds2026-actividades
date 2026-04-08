@@ -1,0 +1,35 @@
+/* --- Selectores de Etiqueta --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía */
+    background-color: #f4f4f9; /* Color de fondo general */
+    color: #333333; /* Color del texto */
+    margin: 0; /* Quitamos el margen por defecto del navegador */
+    padding: 20px; /* Agregamos espacio interno general */
+}
+
+h1 {
+    color: #0056b3; /* Color azul para los títulos principales */
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: #444444;
+    border-bottom: 2px solid #0056b3; /* Una línea decorativa debajo */
+    padding-bottom: 5px;
+}
+
+/* --- Selectores de Clase (Empiezan con un punto) --- */
+.menu-navegacion {
+    background-color: #0056b3;
+    padding: 15px; /* Espaciado interno */
+    margin-bottom: 30px; /* Margen hacia abajo */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilos para los links que están DENTRO de la clase menu-navegacion */
+.menu-navegacion a {
+    color: white; /* Color del texto del link */
+    text-decoration: none; /* Le quita el subrayado a los links */
+    margin-right: 20px; /* Separación entre links */
+    font-weight: bold; /* Letra en negrita */
+}
