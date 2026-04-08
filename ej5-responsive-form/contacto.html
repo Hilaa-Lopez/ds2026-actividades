@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <ul class="menu-navegacion">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="estudios.html">Estudios</a></li>
+        <li><a href="experiencia.html">Experiencia</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+    <div class="contenedor-cv">
+    <h1>Contacto</h1>
+    <h2>Contactame: </h2>
+
+    <form action="#" method="get" class="formulario-contacto">
+            
+            <div class="campo">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required minlength="3" placeholder="Tu nombre">
+            </div>
+
+            <div class="campo">
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required placeholder="tu@email.com">
+            </div>
+
+            <div class="campo">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required minlength="10" placeholder="Escribe tu mensaje aquí..."></textarea>
+            </div>
+
+            <button type="submit" class="boton-enviar">Enviar Mensaje</button>
+        </form>
+
+    </div>
+</body>
+</html>
