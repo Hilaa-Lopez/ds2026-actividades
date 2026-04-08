@@ -1,0 +1,79 @@
+/* 1. Definición de Variables CSS en la raíz */
+:root {
+    --color-fondo-pantalla: #e9ecef;
+    --color-fondo-cv: #ffffff;
+    --color-primario: #0056b3;
+    --color-texto: #333333;
+    --sombra-suave: 0 10px 20px rgba(0,0,0,0.15); /* Variable para sombra */
+    --bordes-redondeados: 12px; /* Variable para bordes */
+}
+
+/* 2. Box-sizing global (Evita que el padding rompa los tamaños) */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Estilos generales usando las variables */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo-pantalla);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 40px 20px;
+    
+    /* Flexbox para centrar la tarjeta del CV en la pantalla */
+    display: flex;
+    justify-content: center;
+}
+
+/* 3. Reorganizar layout: Tarjeta principal del CV */
+.contenedor-cv {
+    background-color: var(--color-fondo-cv);
+    width: 100%;
+    max-width: 800px; /* Ancho máximo de la tarjeta */
+    padding: 40px;
+    
+    /* 4. Bordes y sombras usando las variables */
+    border-radius: var(--bordes-redondeados);
+    box-shadow: var(--sombra-suave);
+}
+
+h1 {
+    color: var(--color-primario);
+    text-align: center; /* Centramos el título principal */
+    margin-top: 0;
+}
+
+h2 {
+    border-bottom: 2px solid var(--color-primario);
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+/* Flexbox para el menú de navegación horizontal */
+.menu-navegacion {
+    background-color: var(--color-primario);
+    padding: 15px;
+    border-radius: var(--bordes-redondeados);
+    list-style: none; /* Quitamos los puntitos de la lista */
+    margin: 20px 0;
+    
+    /* Convertimos la lista en una barra horizontal flexible */
+    display: flex;
+    justify-content: space-around; /* Reparte el espacio por igual */
+    align-items: center;
+    flex-wrap: wrap; /* Si la pantalla es chica, los links bajan solos */
+}
+
+.menu-navegacion a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* Efecto hover (cuando pasas el mouse por encima del link) */
+.menu-navegacion a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+}
