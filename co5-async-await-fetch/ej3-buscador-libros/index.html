@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3 - Buscador Open Library</title>
+    <style>
+        .oculto { display: none; }
+    </style>
+</head>
+<body>
+    <h1>Buscador de Libros</h1>
+    
+    <div>
+        <input type="text" id="input-busqueda" placeholder="Ej: El resplandor">
+        <button id="btn-buscar">Buscar</button>
+    </div>
+
+    <div id="mensaje-error" class="error oculto"></div>
+    <div id="cargando" class="oculto">Buscando en la biblioteca... </div>
+
+    <div id="contenedor-resultados"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
