@@ -35,6 +35,42 @@
             </div>
         </nav>
 
+        <main class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6">
+
+                    <h1 class="text-center mb-4">Contacto</h1>
+                    <p class="text-center text-muted mb-4">Dejanos tu mensaje</p>
+
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Correo Electronico <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="email" placeholder="ejemplo@gmail.com" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="asunto" class="form-label">Asunto <span class="text-danger">*</span></label>
+                            <select class="form-select" id="asunto" required>
+                                <option value="" selected disabled>Selecciona una Opcion.</option>
+                                <option value="consulta">Consulta</option>
+                                <option value="reclamo">Reclamo</option>
+                                <option value="sugerencia">Sugerencia</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje <span class="text-danger">*</span></label>
+                            <textarea class="form-control" id="mensaje" rows="5" placeholder="Escribe el mensaje acá..." required></textarea>
+                        </div>
+
+                        <div class="d-grid mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg">Enviar Mensaje</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
         <script src="js/data.js"></script>
     </body>
