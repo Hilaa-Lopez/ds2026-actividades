@@ -1,13 +1,10 @@
-import type { Libro } from '../types/libro';
 import { useState } from 'react';
 import { Card, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import type { LibroProps } from '../types/libro';
 
-export function LibroCard({ titulo, autor, imagen }: Libro) {
+export function LibroCard({ id, titulo, autor, imagen }: LibroProps) {
     const [likes, setLikes] = useState(0);
-
-    const sumarLike = () => {
-        setLikes(likes + 1);
-    };
 
     return (
         <Card className="h-100 shadow-sm">
@@ -16,15 +13,13 @@ export function LibroCard({ titulo, autor, imagen }: Libro) {
                 <Card.Title className="fw-bold">{titulo}</Card.Title>
                 <Card.Text className="text-muted">{autor}</Card.Text>
                 
-                <Button 
-                    variant="outline-danger" 
-                    className="mt-auto mb-2" 
-                    onClick={sumarLike}
-                >
+                <Button variant="outline-danger" className="mt-auto mb-2" onClick={() => setLikes(likes + 1)}>
                     ♡ Me gusta ({likes})
                 </Button>
                 
-                <Button variant="outline-primary" href="#">Ver detalle</Button>
+                <Link to={`/libros/${id}`} className="btn btn-outline-primary">
+                    Ver detalle
+                </Link>
             </Card.Body>
         </Card>
     );

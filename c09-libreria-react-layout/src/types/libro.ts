@@ -1,4 +1,5 @@
-export type Libro = {
+export interface LibroProps {
+    id: string | number;
     titulo: string;
     autor: string;
     imagen: string;
