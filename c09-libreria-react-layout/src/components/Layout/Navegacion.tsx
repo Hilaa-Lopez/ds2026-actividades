@@ -1,16 +1,15 @@
 import { Navbar, Container, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export function Navegacion() {
     return (
         <Navbar bg="dark" variant="dark" expand="lg">
             <Container>
-                <Navbar.Brand href="#home">Libreria</Navbar.Brand>
-                <Navbar.Toggle aria-controls="navbarNav" />
-                <Navbar.Collapse id="navbarNav">
-                    <Nav className="ms-auto">
-                        <Nav.Link href="#home">Inicio</Nav.Link>
-                        <Nav.Link href="#catalogo">Catalogo</Nav.Link>
-                        <Nav.Link href="#contacto">Contacto</Nav.Link>
+                <Navbar.Brand as={Link} to="/">Librería</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="me-auto">
+                        <Nav.Link as={Link} to="/">Inicio</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
