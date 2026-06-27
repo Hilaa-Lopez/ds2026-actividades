@@ -1,0 +1,4 @@
+[
+    { "id": 1, "titulo": "El Señor de Los Anillos", "autor": "J.R.R. Tolkien", "imagen": "img/el_señor_anillos.webp", "precio": 15000, "disponible": true },
+    { "id": 2, "titulo": "El Principito", "autor": "Antoine de Saint-Exupéry", "imagen": "img/principito.png", "precio": 8000, "disponible": true }
+]
