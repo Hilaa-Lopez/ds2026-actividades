@@ -1,0 +1,90 @@
+@baseUrl = http://localhost:3000
+
+### ================= LIBROS ================= ###
+
+### Listar todos los libros
+GET {{baseUrl}}/api/libros
+
+### Listar libros disponibles
+GET {{baseUrl}}/api/libros?disponible=true
+
+### Ver un libro (Éxito)
+GET {{baseUrl}}/api/libros/1
+
+### Ver un libro (Error 404)
+GET {{baseUrl}}/api/libros/999
+
+### Crear un libro (Status 201)
+POST {{baseUrl}}/api/libros
+Content-Type: application/json
+
+{
+    "titulo": "Rayuela",
+    "autor": "Julio Cortázar",
+    "precio": 7000,
+    "imagen": "https://placehold.co/300x400?text=Rayuela",
+    "disponible": true
+}
+
+### Editar un libro (Status 200)
+PUT {{baseUrl}}/api/libros/1
+Content-Type: application/json
+
+{
+    "titulo": "El Señor de Los Anillos: La Comunidad del Anillo",
+    "autor": "J.R.R. Tolkien",
+    "precio": 16000,
+    "imagen": "img/el_senor_anillos.webp",
+    "disponible": true
+}
+
+### Editar un libro que no existe (Error 404)
+PUT {{baseUrl}}/api/libros/999
+Content-Type: application/json
+
+{
+    "titulo": "Falso",
+    "autor": "Nadie",
+    "precio": 100,
+    "imagen": "",
+    "disponible": false
+}
+
+### Borrar un libro (Status 204)
+DELETE {{baseUrl}}/api/libros/1
+
+### Borrar un libro que ya no existe (Error 404)
+DELETE {{baseUrl}}/api/libros/1
+
+
+### ================= AUTORES ================= ###
+
+### Listar todos los autores
+GET {{baseUrl}}/api/autores
+
+### Ver un autor (Éxito)
+GET {{baseUrl}}/api/autores/2
+
+### Ver un autor (Error 404)
+GET {{baseUrl}}/api/autores/999
+
+### Crear un autor
+POST {{baseUrl}}/api/autores
+Content-Type: application/json
+
+{
+    "nombre": "Ray Bradbury",
+    "nacionalidad": "Estadounidense"
+}
+
+### Editar un autor
+PUT {{baseUrl}}/api/autores/2
+Content-Type: application/json
+
+{
+    "nombre": "Julio Florencio Cortázar",
+    "nacionalidad": "Argentina"
+}
+
+### Borrar un autor
+DELETE {{baseUrl}}/api/autores/2
