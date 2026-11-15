@@ -16,13 +16,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/catalogo" element={<Catalogo />} />
+          <Route element={<PrivateRoute rol="ADMIN" />}>
+          <Route path="/libros/nuevo" element={<LibroNuevo />} />
+          </Route>
           <Route path="/libros/:id" element={<LibroDetalle />} />
           <Route path="/login" element={<Login />} />
           <Route path="/sin-permiso" element={<SinPermiso />} />
-          
-          <Route element={<PrivateRoute rol="ADMIN" />}>
-            <Route path="/libros/nuevo" element={<LibroNuevo />} />
-          </Route>
         </Routes>
       </Layout>
     </AuthProvider>

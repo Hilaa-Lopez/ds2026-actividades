@@ -3,18 +3,19 @@ import { Form, Button, Alert } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useState } from 'react';
-import { libroSchema, type LibroValidado } from '../schemas/libroSchema';
 import { apiFetch } from '../services/api';
+import { libroSchema, type LibroInput, type LibroValidado } from '../schemas/libroSchema';
+
 
 const IMG_PLACEHOLDER = 'https://placehold.co/300x400?text=Libro';
 
 export default function LibroNuevo() {
     const navigate = useNavigate();
     const [errorGlobal, setErrorGlobal] = useState<string | null>(null);
+    const { register, handleSubmit, formState: { errors } } = useForm<LibroInput, any, LibroValidado>({
+    resolver: zodResolver(libroSchema)
+});
 
-    const { register, handleSubmit, formState: { errors } } = useForm<LibroValidado>({
-        resolver: zodResolver(libroSchema)
-    });
 
     const onSubmit = async (data: LibroValidado) => {
         try {
