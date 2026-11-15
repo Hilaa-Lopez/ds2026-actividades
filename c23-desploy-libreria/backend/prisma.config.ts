@@ -1,9 +1,9 @@
 import { defineConfig } from '@prisma/config';
 
 export default defineConfig({
-  orm: {
+    orm: {
     adapter: {
-      provider: 'pg',
+        provider: 'pg',
+        },
     },
-  },
 });
